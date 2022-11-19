@@ -1,3 +1,4 @@
+#improtē bibliotēkas - requests - pieprasījumi API galamērķim; json - NASas atbildes lasīšanai; datetime un time - ģenrerē laiku; yam1 - žurnalēšanas konfigurācija
 import requests
 import json
 import datetime
@@ -10,7 +11,7 @@ print('Asteroid processing service')
 # Initiating and reading config values
 print('Loading configuration from file')
 
-# 
+# Nasas API atslēga un adrese
 nasa_api_key ="bPzDG1rTd8w3vvzXmzRfwDE3kngXhu9Hsvqq1Ntz"
 nasa_api_url = "https://api.nasa.gov/neo/"
 
@@ -19,14 +20,14 @@ dt = datetime.now()
 request_date = str(dt.year) + "-" + str(dt.month).zfill(2) + "-" + str(dt.day).zfill(2)  
 print("Generated today's date: " + str(request_date))
 
-
+#pieprasijums NASA
 print("Request url: " + str(nasa_api_url + "rest/v1/feed?start_date=" + request_date + "&end_date=" + request_date + "&api_key=" + nasa_api_key))
 r = requests.get(nasa_api_url + "rest/v1/feed?start_date=" + request_date + "&end_date=" + request_date + "&api_key=" + nasa_api_key)
 
 print("Response status code: " + str(r.status_code))
 print("Response headers: " + str(r.headers))
 print("Response content: " + str(r.text))
-
+#ja pieprasījums ir derīgs:
 if r.status_code == 200:
 
 	json_data = json.loads(r.text)

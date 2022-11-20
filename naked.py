@@ -37,7 +37,6 @@ try:
 	mysql_config_mysql_db = config.get('mysql_config', 'mysql_db')
 	mysql_config_mysql_user = config.get('mysql_config', 'mysql_user')
 	mysql_config_mysql_pass = config.get('mysql_config', 'mysql_pass')
-
 except:
 	logger.exception('')
 logger.info('DONE')
@@ -97,7 +96,7 @@ if __name__ == "__main__":
 	connection = None
 	connected = False
 
-	init_db()	
+	init_db()
 
 	# Opening connection to mysql DB
 	logger.info('Connecting to MySQL DB')
@@ -195,7 +194,7 @@ if __name__ == "__main__":
 						if tmp_ast_hazardous == True:
 							ast_hazardous.append([tmp_ast_name, tmp_ast_nasa_jpl_url, tmp_ast_diam_min, tmp_ast_diam_max, tmp_ast_close_appr_ts, tmp_ast_close_appr_dt_utc, tmp_ast_close_appr_dt, tmp_ast_speed, tmp_ast_miss_dist, tmp_ast_id])
 						else:
-							ast_safe.append([tmp_ast_name, tmp_ast_nasa_jpl_url, tmp_ast_diam_min, tmp_ast_diam_max, tmp_ast_close_appr_ts, tmp_ast_close_appr_dt_utc, tmp_ast_close_appr_dt, tmp_ast_speed, tmp_ast_miss_dist, temp_ast_id])
+							ast_safe.append([tmp_ast_name, tmp_ast_nasa_jpl_url, tmp_ast_diam_min, tmp_ast_diam_max, tmp_ast_close_appr_ts, tmp_ast_close_appr_dt_utc, tmp_ast_close_appr_dt, tmp_ast_speed, tmp_ast_miss_dist, tmp_ast_id])
 
 			else:
 				logger.info("No asteroids are going to hit earth today")
@@ -212,7 +211,7 @@ if __name__ == "__main__":
 
 			ast_hazardous.sort(key = lambda x: x[8], reverse=False)
 			logger.info("Closest passing distance is for: " + str(ast_hazardous[0][0]) + " at: " + str(int(ast_hazardous[0][8])) + " km | more info: " + str(ast_hazardous[0][1]))
-			 push_asteroids_arrays_to_db(request_date, ast_hazardous, 1)
+			push_asteroids_arrays_to_db(request_date, ast_hazardous, 1)
 		else:
 			logger.info("No asteroids close passing earth today")
 

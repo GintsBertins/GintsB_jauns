@@ -1,0 +1,29 @@
+2022-11-20 15:18:35,834 - INFO - migrate_db : Asteroid DB migration service
+2022-11-20 15:18:35,834 - INFO - migrate_db : Loading configuration from file
+2022-11-20 15:18:35,836 - INFO - migrate_db : DONE
+2022-11-20 16:18:28,612 - INFO - migrate_db : Asteroid DB migration service
+2022-11-20 16:18:28,613 - INFO - migrate_db : Loading configuration from file
+2022-11-20 16:18:28,614 - INFO - migrate_db : DONE
+2022-11-20 16:21:41,002 - INFO - migrate_db : Asteroid DB migration service
+2022-11-20 16:21:41,002 - INFO - migrate_db : Loading configuration from file
+2022-11-20 16:21:41,003 - INFO - migrate_db : DONE
+2022-11-20 16:26:36,901 - INFO - migrate_db : Asteroid DB migration service
+2022-11-20 16:26:36,901 - INFO - migrate_db : Loading configuration from file
+2022-11-20 16:26:36,902 - INFO - migrate_db : DONE
+2022-11-20 16:35:31,370 - INFO - migrate_db : Asteroid DB migration service
+2022-11-20 16:35:31,370 - INFO - migrate_db : Loading configuration from file
+2022-11-20 16:35:31,371 - INFO - migrate_db : DONE
+2022-11-20 16:35:31,377 - INFO - migrate_db : Connecting to MySQL DB
+2022-11-20 16:35:31,383 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.34-MariaDB-0ubuntu0.20.04.1
+2022-11-20 16:35:31,409 - INFO - migrate_db : Executing: 20210924203000-initial-db-struct.sql
+2022-11-20 16:35:31,437 - INFO - migrate_db : None
+2022-11-20 16:35:31,442 - INFO - migrate_db : OK
+2022-11-20 16:35:31,446 - INFO - migrate_db : Executing: 20210925134800-add-date-to-ast-table.sql
+2022-11-20 16:35:31,451 - INFO - migrate_db : None
+2022-11-20 16:35:31,459 - INFO - migrate_db : OK
+2022-11-20 16:35:31,462 - INFO - migrate_db : Executing: 20210925135800-add-ast-id-to-ast-table.sql
+2022-11-20 16:35:31,467 - INFO - migrate_db : None
+2022-11-20 16:35:31,472 - INFO - migrate_db : OK
+2022-11-20 16:35:31,475 - INFO - migrate_db : Executing: 20210925135800-add-hazard-to-ast-table.sql
+2022-11-20 16:35:31,481 - INFO - migrate_db : None
+2022-11-20 16:35:31,487 - INFO - migrate_db : OK
